@@ -1,4 +1,4 @@
-<div class="col-xl-6 col-lg-8 col-md-8 col-sm-10 mx-auto text-center p-5">
+<div id="app" class="col-xl-6 col-lg-8 col-md-8 col-sm-10 mx-auto text-center p-5">
     <i class="fas fa-solid fa-toggle-off"></i>
 
     <h1 class="text-white mb-5">You have the right to switch off.</h1>
@@ -204,6 +204,10 @@
             <div class="col">
 
                 <label class="text-white mb-2">Annual salary: <span>*</span>&nbsp;</label>
+
+                {{!-- <cleave :options="dollar_options" id="salary-gross" class="form-control mb-3"
+                    v-model="salary_unformatted" required>
+                </cleave> --}}
                 <input type="text" placeholder="60000" class="form-control mb-3" name="salary" id="salary-gross"
                     required />
             </div>
@@ -217,9 +221,23 @@
 
 
     </form>
+    {{!--
+    <script>
+        Vue.use(VueCleave);
+        var app = new Vue({
+            // the element to apply the code to
+            el: '#app',
+            //define the variables
+            data: {
+                salary_unformatted: '',
+                dollar_options: {
+                    prefix: '$',
+                    numeral: true,
+                    numeralThousandsGroupStyle: 'thousand'
+                }
+            }
 
-
-
-
+        })
+    </script> --}}
 
     <script src="/js/entry.js"></script>

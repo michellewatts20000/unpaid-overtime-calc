@@ -1,7 +1,25 @@
 const express = require('express');
-const { Entry } = require('../models');
+const {
+  Entry
+} = require('../models');
 const sequelize = require('../config/connection');
 const router = express.Router();
+
+
+// console.log(
+//   unpaidHours.toFixed(0),
+//   hourlySalary.toFixed(0),
+//   email,
+//   "Extra:",
+//   extra,
+//   "ExtratimeRes",
+//   extraTimeRes,
+//   lunch,
+//   salary,
+//   industry,
+//   start,
+//   end
+// );
 
 router.get('/:id', async (req, res) => {
   const userSumIndustry = await Entry.findAll({
@@ -86,6 +104,8 @@ router.get('/:id', async (req, res) => {
     latestUser,
     totals,
   });
+
+
 });
 
 module.exports = router;

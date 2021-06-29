@@ -58,13 +58,12 @@ const calculate = async () => {
   }
 
   if (end > start) {
-    var oneDay = end - start + 24 - 8;
-
+    var oneDay = (end - start) + 24 - 8;
     if (oneDay < 0) {
       alert('Please enter full time hours');
     } else if (lunch === 'yeslunch') {
       let unpaidHours = (oneDay * 230) + extraTimeRes;
-      let hourlySalary = salary / 260 / 7.5;
+      let hourlySalary = (salary / 260) / 7.6;
       let unpaidSalary = hourlySalary * unpaidHours;
       return entryFormHandler(
         parseInt(unpaidHours.toFixed(0)),
@@ -73,7 +72,7 @@ const calculate = async () => {
     } else {
       var oneDayNew = oneDay + 0.5;
       let unpaidHours = (oneDayNew * 230) + extraTimeRes;
-      let hourlySalary = salary / 260 / 7.5;
+      let hourlySalary = (salary / 260) / 7.6;
       let unpaidSalary = hourlySalary * unpaidHours;
       return entryFormHandler(
         parseInt(unpaidHours.toFixed(0)),
@@ -81,13 +80,13 @@ const calculate = async () => {
       );
     }
   } else {
-    var oneDay = end - start - 8;
+    var oneDay = (end - start) - 8;
 
     if (oneDay < 0) {
       alert('Please enter full time hours');
     } else if (lunch === 'yeslunch') {
       let unpaidHours = (oneDay * 230) + extraTimeRes;
-      let hourlySalary = salary / 260 / 7.5;
+      let hourlySalary = (salary / 260) / 7.6;
       let unpaidSalary = hourlySalary * unpaidHours;
       return entryFormHandler(
         parseInt(unpaidHours.toFixed(0)),
@@ -96,7 +95,7 @@ const calculate = async () => {
     } else {
       var oneDayNew = oneDay + 0.5;
       let unpaidHours = (oneDayNew * 230) + extraTimeRes;
-      let hourlySalary = salary / 260 / 7.5;
+      let hourlySalary = (salary / 260) / 7.6;
       let unpaidSalary = hourlySalary * unpaidHours;
       return entryFormHandler(
         parseInt(unpaidHours.toFixed(0)),
@@ -106,21 +105,24 @@ const calculate = async () => {
 
   }
 
-  // console.log(
-  //   unpaidHours.toFixed(0),
-  //   hourlySalary.toFixed(0),
-  //   email,
-  //   "Extra:",
-  //   extra,
-  //   "ExtratimeRes",
-  //   extraTimeRes,
-  //   lunch,
-  //   salary,
-  //   industry,
-  //   start,
-  //   end
-  // );
+  console.log(
+    unpaidHours.toFixed(0),
+    hourlySalary.toFixed(0),
+    email,
+    "Extra:",
+    extra,
+    "ExtratimeRes",
+    extraTimeRes,
+    lunch,
+    salary,
+    industry,
+    start,
+    end
+  );
 }
+
+
+
 
 
 document.querySelector('#entry-form').addEventListener('submit', calculate);
