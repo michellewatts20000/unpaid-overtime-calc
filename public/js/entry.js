@@ -5,8 +5,7 @@ const entryFormHandler = async (unpaidHours, unpaidSalary) => {
   const end = document.querySelector('#end-entry').value;
   const salary = document.querySelector('#salary-gross').value.trim();
   const lunch = document.querySelector(
-    'input[name="inlineRadioOptions"]:checked'
-  ).value;
+    'input[name="lunchOptions"]:checked').value;
   if (email && industry && start && end && lunch && salary) {
     const response = await fetch('/api/entry', {
       method: 'POST',
@@ -40,10 +39,23 @@ const calculate = async () => {
   const start = document.querySelector('#start-entry').value;
   const end = document.querySelector('#end-entry').value;
   const salary = document.querySelector('#salary-gross').value.trim();
+  const extra = document.querySelector('input[name="extraTime"]:checked').value;
   const lunch = document.querySelector(
-    'input[name="inlineRadioOptions"]:checked'
+    'input[name="lunchOptions"]:checked'
   ).value;
   event.preventDefault();
+
+  if (extra === '15') {
+    var extraTimeRes = 0.25 * 365;
+  } else if (extra === '30') {
+    var extraTimeRes = 0.5 * 365;
+  } else if (extra === '45') {
+    var extraTimeRes = 0.75 * 365;
+  } else if (extra === '60') {
+    var extraTimeRes = 1 * 365;
+  } else {
+    var extraTimeRes = 0;
+  }
 
   if (end > start) {
     var oneDay = end - start + 24 - 8;
@@ -51,7 +63,7 @@ const calculate = async () => {
     if (oneDay < 0) {
       alert('Please enter full time hours');
     } else if (lunch === 'yeslunch') {
-      let unpaidHours = oneDay * 230;
+      let unpaidHours = (oneDay * 230) + extraTimeRes;
       let hourlySalary = salary / 260 / 7.5;
       let unpaidSalary = hourlySalary * unpaidHours;
       return entryFormHandler(
@@ -60,7 +72,7 @@ const calculate = async () => {
       );
     } else {
       var oneDayNew = oneDay + 0.5;
-      let unpaidHours = oneDayNew * 230;
+      let unpaidHours = (oneDayNew * 230) + extraTimeRes;
       let hourlySalary = salary / 260 / 7.5;
       let unpaidSalary = hourlySalary * unpaidHours;
       return entryFormHandler(
@@ -74,7 +86,7 @@ const calculate = async () => {
     if (oneDay < 0) {
       alert('Please enter full time hours');
     } else if (lunch === 'yeslunch') {
-      let unpaidHours = oneDay * 230;
+      let unpaidHours = (oneDay * 230) + extraTimeRes;
       let hourlySalary = salary / 260 / 7.5;
       let unpaidSalary = hourlySalary * unpaidHours;
       return entryFormHandler(
@@ -83,7 +95,7 @@ const calculate = async () => {
       );
     } else {
       var oneDayNew = oneDay + 0.5;
-      let unpaidHours = oneDayNew * 230;
+      let unpaidHours = (oneDayNew * 230) + extraTimeRes;
       let hourlySalary = salary / 260 / 7.5;
       let unpaidSalary = hourlySalary * unpaidHours;
       return entryFormHandler(
@@ -92,16 +104,23 @@ const calculate = async () => {
       );
     }
 
-    console.log(
-      unpaidHours.toFixed(0),
-      hourlySalary.toFixed(0),
-      email,
-      salary,
-      industry,
-      start,
-      end
-    );
   }
-};
+
+  // console.log(
+  //   unpaidHours.toFixed(0),
+  //   hourlySalary.toFixed(0),
+  //   email,
+  //   "Extra:",
+  //   extra,
+  //   "ExtratimeRes",
+  //   extraTimeRes,
+  //   lunch,
+  //   salary,
+  //   industry,
+  //   start,
+  //   end
+  // );
+}
+
 
 document.querySelector('#entry-form').addEventListener('submit', calculate);

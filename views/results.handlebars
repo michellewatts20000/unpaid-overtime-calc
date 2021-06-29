@@ -8,6 +8,7 @@
       <i class="fas fa-solid fa-user mb-3"></i>
       <h3 class="text-white text-center mb-3">
         You worked <span class="text-danger">{{numberWithCommas latestUser.unpaidHours}}</span> hours of unpaid overtime
+        in one year
         and
         were underpaid <span class="text-danger">${{numberWithCommas latestUser.unpaidSalary}}</span></h3>
     </div>
@@ -64,11 +65,7 @@
     </div>
   </div>
 
-  {{#if logged_in}}
 
-  {{else}}
-  <p class="text-white text-centre mt-5">If you are an admin you can login <a class="" href="/login">here</a></p>
-  {{/if}}
 
   <script>
     function myFunction() {

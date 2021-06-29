@@ -8,8 +8,8 @@
         <div class="row">
             <div class="col">
                 <label class="text-white mb-2">Email address: <span>*</span>&nbsp;</label>
-                <input type="text" class="form-control mb-3 email-entry" placeholder="your@email.com"
-                    name="email_address" id="email-entry" required />
+                <input type="text" required class="form-control mb-3 email-entry" placeholder="your@email.com"
+                    name="email_address" id="email-entry" />
             </div>
         </div>
 
@@ -161,7 +161,46 @@
             </div>
         </div>
 
-        <div class="row mb-4 industry-entry">
+
+        <div class="row lunch-entry">
+            <div class="col">
+
+                <label class="text-white mb-2">Do you take a lunch break? <span>*</span>&nbsp;</label>
+                <br>
+                <div class="toggle">
+                    <input class="form-check-input" type="radio" name="lunchOptions" checked="checked" id="inlineRadio1"
+                        value="yeslunch">
+                    <label class="form-check-label" for="inlineRadio1">Yes</label>
+
+
+                    <input class="form-check-input" type="radio" name="lunchOptions" id="inlineRadio2" value="nolunch">
+                    <label class="form-check-label" for="inlineRadio2">No</label>
+                </div>
+            </div>
+        </div>
+        <div class="row extra-entry mt-2">
+            <div class="col">
+                <label class="text-white mb-2">How many minutes do you spend each day outside of
+                    work messaging, emailing and answering
+                    phone
+                    calls?</label>
+
+                <div class="toggle2">
+                    <input type="radio" name="extraTime" id="15" value="15" />
+                    <label for="15">15</label>
+
+                    <input type="radio" name="extraTime" id="30" value="30" />
+                    <label for="30">30</label>
+
+                    <input type="radio" name="extraTime" id="45" value="45" />
+                    <label for="45">45</label>
+
+                    <input type="radio" name="extraTime" id="60" value="60" />
+                    <label for="60">60+</label>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-4 mt-2 industry-entry">
             <div class="col">
 
                 <label class="text-white mb-2">Annual salary: <span>*</span>&nbsp;</label>
@@ -170,33 +209,11 @@
             </div>
         </div>
 
-        <div class="row industry-entry">
-            <div class="col">
-
-                <label class="text-white mb-2">Do you take a lunch break? <span>*</span>&nbsp;</label>
-                <br>
-                <div class="form-check form-check-inline" id="lunch-entry">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" checked="checked"
-                        id="inlineRadio1" value="yeslunch">
-                    <label class="text-white form-check-label" for="inlineRadio1">Yes</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                        value="nolunch">
-                    <label class="text-white form-check-label" for="inlineRadio2">No</label>
-                </div>
-            </div>
-        </div>
 
         <br>
 
         <button type="submit" id="custom_submit" value="Submit" class="btn btn-danger">Submit</button>
 
-        {{#if logged_in}}
-
-        {{else}}
-        <p class="text-white text-centre mt-5">If you are an admin you can login <a class="" href="/login">here</a></p>
-        {{/if}}
 
 
     </form>
