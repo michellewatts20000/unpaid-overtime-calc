@@ -65,18 +65,48 @@ const calculate = async () => {
       let unpaidHours = (oneDay * 230) + extraTimeRes;
       let hourlySalary = (salary / 260) / 7.6;
       let unpaidSalary = hourlySalary * unpaidHours;
-      return entryFormHandler(
-        parseInt(unpaidHours.toFixed(0)),
-        parseInt(unpaidSalary.toFixed(0))
+      // return entryFormHandler(
+      //   parseInt(unpaidHours.toFixed(0)),
+      //   parseInt(unpaidSalary.toFixed(0))
+      // );
+      console.log(
+        unpaidHours.toFixed(0),
+        hourlySalary.toFixed(0),
+        unpaidSalary.toFixed(0),
+        email,
+        "Extra:",
+        extra,
+        "ExtratimeRes:",
+        extraTimeRes,
+        lunch,
+        salary,
+        industry,
+        start,
+        end, hourlySalary, unpaidSalary
       );
     } else {
       var oneDayNew = oneDay + 0.5;
       let unpaidHours = (oneDayNew * 230) + extraTimeRes;
       let hourlySalary = (salary / 260) / 7.6;
       let unpaidSalary = hourlySalary * unpaidHours;
-      return entryFormHandler(
-        parseInt(unpaidHours.toFixed(0)),
-        parseInt(unpaidSalary.toFixed(0))
+      // return entryFormHandler(
+      //   parseInt(unpaidHours.toFixed(0)),
+      //   parseInt(unpaidSalary.toFixed(0))
+      // );
+      console.log(
+        unpaidHours.toFixed(0),
+        hourlySalary.toFixed(0),
+        unpaidSalary.toFixed(0),
+        email,
+        "Extra:",
+        extra,
+        "ExtratimeRes",
+        extraTimeRes,
+        lunch,
+        salary,
+        industry,
+        start,
+        end
       );
     }
   } else {
@@ -88,41 +118,59 @@ const calculate = async () => {
       let unpaidHours = (oneDay * 230) + extraTimeRes;
       let hourlySalary = (salary / 260) / 7.6;
       let unpaidSalary = hourlySalary * unpaidHours;
-      return entryFormHandler(
-        parseInt(unpaidHours.toFixed(0)),
-        parseInt(unpaidSalary.toFixed(0))
+      // return entryFormHandler(
+      //   parseInt(unpaidHours.toFixed(0)),
+      //   parseInt(unpaidSalary.toFixed(0))
+      // );
+      console.log(
+        unpaidHours.toFixed(0),
+        hourlySalary.toFixed(0),
+        unpaidSalary.toFixed(0),
+        email,
+        "Extra:",
+        extra,
+        "ExtratimeRes",
+        extraTimeRes,
+        lunch,
+        salary,
+        industry,
+        start,
+        end
       );
     } else {
       var oneDayNew = oneDay + 0.5;
       let unpaidHours = (oneDayNew * 230) + extraTimeRes;
       let hourlySalary = (salary / 260) / 7.6;
       let unpaidSalary = hourlySalary * unpaidHours;
-      return entryFormHandler(
-        parseInt(unpaidHours.toFixed(0)),
-        parseInt(unpaidSalary.toFixed(0))
+      // return entryFormHandler(
+      //   parseInt(unpaidHours.toFixed(0)),
+      //   parseInt(unpaidSalary.toFixed(0))
+      // );
+      console.log(
+        unpaidHours.toFixed(0),
+        hourlySalary.toFixed(0),
+        unpaidSalary.toFixed(0),
+        email,
+        "Extra:",
+        extra,
+        "ExtratimeRes",
+        extraTimeRes,
+        lunch,
+        salary,
+        industry,
+        start,
+        end
       );
     }
 
   }
 
-  console.log(
-    unpaidHours.toFixed(0),
-    hourlySalary.toFixed(0),
-    email,
-    "Extra:",
-    extra,
-    "ExtratimeRes",
-    extraTimeRes,
-    lunch,
-    salary,
-    industry,
-    start,
-    end
-  );
+
 }
 
 
 
 
 
-document.querySelector('#entry-form').addEventListener('submit', calculate);
+document.querySelector('#entry-form-full').addEventListener('submit', calculate);
+document.querySelector('#entry-form-part').addEventListener('submit', calculate);
