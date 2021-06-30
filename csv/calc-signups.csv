@@ -41,3 +41,5 @@ id,industry,salary,start,end,lunch,unpaidHours,unpaidSalary,email,created_at
 40,Health,70000,8.50,17.00,1,115,4423,mattfriedman@gmail.com,1625008644000
 41,Construction,60000,,,,276,21231,watts.e.michelle@gmail.com,1625009362000
 42,"Agriculture, forestry & fishing",60000,,,,230,26538,mwatts@unionsnsw.org.au,1625009484000
+43,Administration & professional services,70000,9.00,17.50,,321,11380,watts.e.michelle@gmail.com,1625016432000
+44,Health,70000,,,,230,20641,watts.e.michelle@gmail.com,1625016824000

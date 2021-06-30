@@ -35,7 +35,7 @@ router.post('/', async (req, res) => {
   });
 
   var mailOptions = {
-    from: '"Mark Morey - Unions NSW" <unpaidovertimecalculator@gmail.com>',
+    from: '"Mark Morey - Unions NSW" <reply@unionsnsw.org.au>',
     to: req.body.email,
     subject: 'Thanks for using the unpaid overtime calculator',
     text: `Hey ${req.body.email}, thanks for using our unpaid overtime calculator :)`,
@@ -55,14 +55,18 @@ router.post('/', async (req, res) => {
   });
 });
 
+
 var transport = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 465,
-  secure: true, // use SSL
-  auth: {
-    user: 'unpaidovertimecalculator@gmail.com',
-    pass: process.env.PASS,
+  host: "smtp-mail.outlook.com", // hostname
+  secureConnection: false, // TLS requires secureConnection to be false
+  port: 587, // port for secure SMTP
+  tls: {
+    ciphers: 'SSLv3'
   },
+  auth: {
+    user: 'reply@unionsnsw.org.au',
+    pass: process.env.PASS,
+  }
 });
 
 module.exports = router;
