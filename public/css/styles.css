@@ -2,6 +2,22 @@ html {
   scroll-behavior: smooth;
 }
 
+.social a {
+  font-size: 40px;
+  margin-right: 10px;
+  list-style: none;
+  color: #727272;
+}
+
+.social a:hover {
+  font-size: 40px;
+  margin-right: 10px;
+  list-style: none;
+  color: #72727262;
+  ;
+}
+
+
 .selectt {
   display: none;
 }

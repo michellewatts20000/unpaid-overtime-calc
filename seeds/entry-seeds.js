@@ -1,7 +1,8 @@
-const { Entry } = require('../models');
+const {
+  Entry
+} = require('../models');
 
-const entryData = [
-  {
+const entryData = [{
     industry: 'Education',
     salary: 70000,
     start: 8.5,
@@ -157,7 +158,7 @@ const entryData = [
     start: 7.5,
     end: 16.5,
     lunch: true,
-    nunpaidHours: 230,
+    unpaidHours: 230,
     unpaidSalary: 12005,
     email: 'gillianarnold@gmail.com',
   },
