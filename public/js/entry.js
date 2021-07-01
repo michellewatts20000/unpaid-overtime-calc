@@ -155,6 +155,11 @@ const calculatePart = async () => {
   }
 
 
+  if (actual < paid) {
+    return alert("You need to have worked more actual hours than your paid hours to use this calculator.")
+  }
+
+
 
   let unpaidHours = ((actual - paid) * 46) + extraTimeRes
   let hourlySalary = (salary / 52) / paid;
