@@ -76,6 +76,9 @@ router.get('/:id', async (req, res) => {
 
   const totals = users2.find((u) => u.industry === latestUser.industry);
 
+  const average = totals.total_unpaid_salary / totals.total_submissions;
+  console.log("average", average)
+
   const totalNumber = userData.length;
 
   res.render('results', {
@@ -87,6 +90,7 @@ router.get('/:id', async (req, res) => {
     totalNumber,
     latestUser,
     totals,
+    average
   });
 
 
