@@ -2,6 +2,9 @@ html {
   scroll-behavior: smooth;
 }
 
+.input-group-text {
+  border-radius: .25rem 0 0 .25rem;
+}
 
 .fade-in {
   animation: fadeIn 3s;
