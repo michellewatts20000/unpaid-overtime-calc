@@ -3,7 +3,56 @@
   <i class="fas fa-solid fa-toggle-off"></i>
   <h1 class="text-white mb-5">You have the right to switch off.</h1>
 
-  <div id="list" class="fade-in">
+  <div class="row justify-content-md-center mb-5">
+
+    <div class="col">
+      <ul class="text-white" id="list">
+        <li class="mb-5"><i class="fas fa-solid fa-user mb-3"></i>
+          <h3 class="text-white text-center mb-3 ">
+            You worked <span class="text-danger">{{numberWithCommas latestUser.unpaidHours}}</span> hours of unpaid
+            overtime
+            in one year
+            and
+            were underpaid <span class="text-danger">${{numberWithCommas latestUser.unpaidSalary}}</span></h3>
+        </li>
+        <li class="mb-5"><i class="fas fa-solid fa-industry mb-3"></i>
+          <h3 class="text-white text-center">
+            In your industry
+            <span class="text-danger">{{numberWithCommas totals.industry}}</span> the average amount of unpaid overtime
+            per year is:
+            <span class="text-danger">${{numberWithCommas average}}</span>
+          </h3>
+        </li>
+        <li class="mb-5"><i class="fas fa-solid fa-users mb-3"></i>
+          <h3 class="text-white text-center">
+            <span class="text-danger">{{numberWithCommas totalNumber}}</span> people have used this calculator and have
+            worked a total of
+            {{#each users3 as | user |}}<span class="text-danger">{{numberWithCommas
+              total_unpaid_hours}}</span>{{/each}}
+            unpaid hours, which
+            totalled <span class="text-danger">${{#each users4 as | user |}}{{ numberWithCommas total_unpaid_salary
+              }}</span>
+          </h3>{{/each}}
+        </li>
+
+        <li class="social">
+          <p class="text-white mb-0">Share this calculator:</p>
+          <a target="_blank"
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A//unpaid-overtime.herokuapp.com/"><i
+              class="fab fa-facebook-square"></i></a>
+
+          <a target="_blank" href="https://twitter.com/intent/tweet?text=https%3A//unpaid-overtime.herokuapp.com/"><i
+              class="fab fa-twitter-square"></i></a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+
+
+
+  {{!-- <div id="list" class="fade-in">
     <div class="row justify-content-md-center mb-5">
 
       <div class="col">
@@ -39,7 +88,7 @@
         </h3>
 
       </div>
-    </div>
+    </div> --}}
 
     {{!-- <div class="row justify-content-md-center mb-5">
       <div class="col">
@@ -56,7 +105,7 @@
       </div>
     </div> --}}
 
-    <div class="row justify-content-md-center mb-5">
+    {{!-- <div class="row justify-content-md-center mb-5">
       <div class="col" id="three">
         <i class="fas fa-solid fa-users mb-3"></i>
         <h3 class="text-white text-center">
@@ -92,7 +141,7 @@
       </div>
       {{/each}}
     </div>
-  </div>
+  </div> --}}
 
 
 
