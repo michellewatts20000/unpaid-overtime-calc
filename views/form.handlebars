@@ -211,10 +211,17 @@
                 </div>
             </div>
             <div class="row mb-4 mt-2 industry-entry">
-                <div class="col">
+                <div class="col text">
                     <label class="text-white mb-2">Annual salary: <span>*</span>&nbsp;</label>
-                    <input type="number" placeholder="60000" class="form-control mb-3" name="salary" id="salary-gross"
-                        required />
+                    <div class="input-group">
+
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+
+                        <input placeholder="60000" class="form-control mb-3 datainto" name="salary" id="salary-gross"
+                            required />
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -243,10 +250,17 @@
                 </div>
             </div>
             <div class="row mb-4 mt-2 salary-entry">
-                <div class="col">
+                <div class="col text">
                     <label class="text-white mb-2">Annual salary: <span>*</span>&nbsp;</label>
-                    <input type="text" placeholder="60000" class="form-control" name="salary" id="salary-gross-part"
-                        required />
+                    <div class="input-group">
+
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+
+                        <input type="text" placeholder="60000" class="form-control datainto" name="salary"
+                            id="salary-gross-part" required />
+                    </div>
                 </div>
             </div>
             <div class="row mb-4 industry-entry">
@@ -337,4 +351,29 @@
             });
         });
     </script>
+
+
+    <script>
+        function addCommas(nStr) {
+            nStr += '';
+            x = nStr.split('.');
+            x1 = x[0];
+            x2 = x.length > 1 ? '.' + x[1] : '';
+            var rgx = /(\d+)(\d{3})/;
+            while (rgx.test(x1)) {
+                x1 = x1.replace(rgx, '$1' + ',' + '$2');
+            }
+            return x1 + x2;
+        }
+
+        $('.datainto').keyup(function () {
+            var value = $(this).val().replace(/,/g, '');
+            console.log(value);
+            $(this).val(addCommas(value));
+        });
+
+    </script>
+
+
     <script src="/js/entry.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>

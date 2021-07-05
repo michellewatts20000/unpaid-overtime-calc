@@ -3,7 +3,9 @@ const entryFormHandler = async (unpaidHours, unpaidSalary) => {
   const industry = document.querySelector('#industry-entry').value;
   const start = document.querySelector('#start-entry').value;
   const end = document.querySelector('#end-entry').value;
-  const salary = document.querySelector('#salary-gross').value.trim();
+  let salary = document.querySelector('#salary-gross').value.trim();
+  salary = salary.replace(/[, ]+/g, "").trim();
+  console.log("salary", salary)
   const lunch = document.querySelector(
     'input[name="lunchOptions"]:checked').value;
   if (email && industry && start && end && lunch && salary) {
@@ -37,8 +39,8 @@ const entryFormHandler = async (unpaidHours, unpaidSalary) => {
 const entryFormHandlerPart = async (unpaidHours, unpaidSalary) => {
   const email = document.querySelector('#email-entry-part').value.trim();
   const industry = document.querySelector('#industry-entry-part').value;
-  const salary = document.querySelector('#salary-gross-part').value.trim();
-
+  let salary = document.querySelector('#salary-gross-part').value.trim();
+  salary = salary.replace(/[, ]+/g, "").trim();
   if (email && industry && salary) {
     const response = await fetch('/api/entry', {
       method: 'POST',
@@ -66,7 +68,9 @@ const entryFormHandlerPart = async (unpaidHours, unpaidSalary) => {
 const calculate = async () => {
   const start = document.querySelector('#start-entry').value;
   const end = document.querySelector('#end-entry').value;
-  const salary = document.querySelector('#salary-gross').value.trim();
+  let salary = document.querySelector('#salary-gross').value.trim();
+  salary = salary.replace(/[, ]+/g, "").trim();
+  console.log("salary", salary)
   const extra = document.querySelector('input[name="extraTime"]:checked').value;
   const lunch = document.querySelector(
     'input[name="lunchOptions"]:checked'
@@ -137,7 +141,8 @@ const calculate = async () => {
 const calculatePart = async () => {
   const paid = document.querySelector('#paid-hours').value;
   const actual = document.querySelector('#actual-hours').value;
-  const salary = document.querySelector('#salary-gross-part').value.trim();
+  let salary = document.querySelector('#salary-gross-part').value.trim();
+  salary = salary.replace(/[, ]+/g, "").trim();
   const extra = document.querySelector('input[name="extraTime"]:checked').value;
 
   event.preventDefault();
