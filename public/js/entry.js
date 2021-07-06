@@ -10,7 +10,7 @@ const entryFormHandler = async (unpaidHours, unpaidSalary) => {
     'input[name="lunchOptions"]:checked').value;
 
   if (isNaN(salary)) {
-    return alert("please enter a number in the salary field")
+    return alert("please enter numbers in the salary field")
   }
 
   if (email && industry && start && end && lunch && salary) {
@@ -48,7 +48,7 @@ const entryFormHandlerPart = async (unpaidHours, unpaidSalary) => {
   salary = salary.replace(/[, ]+/g, "").trim();
 
   if (isNaN(salary)) {
-    return alert("please enter a number in the salary field")
+    return alert("please enter numbers in the salary field")
   }
 
   if (email && industry && salary) {
