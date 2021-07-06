@@ -39,12 +39,18 @@ router.post('/', async (req, res) => {
     to: req.body.email,
     subject: 'Thanks for using the unpaid overtime calculator',
     text: `Hey ${req.body.email}, thanks for using our unpaid overtime calculator :)`,
-    html: `<b>Hey ${req.body.email}! </b><br><br>You worked ${req.body.unpaidHours} hours for a total of $${req.body.unpaidSalary}, was it worth it?<br><br>
+    html: `<p>Hey ${req.body.email}! </p>
+   <p> You worked ${req.body.unpaidHours} hours for a total of $${req.body.unpaidSalary}, was it worth it?</p>
+    <p> Australians work some of the highest levels of unpaid overtime in the world and it 's only getting worse. We'
+    d like that to stop.</p>
+
+    <p>It's not just that you're working for free, it's time that you could be spending doing the things that make you happy, like hanging out with family and friends, being active in your community, pursuing your passions or relaxing and caring for your mental and physical health.</p>
+     
+      <p> Do you know anyone else who might like using this calculator? Share them this link: <a href="https://unpaid-overtime.herokuapp.com/"> https://unpaid-overtime.herokuapp.com/</a></p>
+      <p>Thanks,</p>
+      <p>Mark Morey, Secretary of Unions NSW</p>
       <br>
-      <br>
-       Do you know anyone else who might like using this calculator ? <br> Share them this link: <a href="https://unpaid-overtime.herokuapp.com/"> https://unpaid-overtime.herokuapp.com/</a><br>
-      Thanks,<br>
-      <b>The unpaid overtime team</b>`,
+      <br>`,
   };
 
   transport.sendMail(mailOptions, (error, info) => {
