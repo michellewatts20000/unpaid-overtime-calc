@@ -8,6 +8,11 @@ const entryFormHandler = async (unpaidHours, unpaidSalary) => {
   console.log("salary", salary)
   const lunch = document.querySelector(
     'input[name="lunchOptions"]:checked').value;
+
+  if (isNaN(salary)) {
+    return alert("please enter a number in the salary field")
+  }
+
   if (email && industry && start && end && lunch && salary) {
     const response = await fetch('/api/entry', {
       method: 'POST',
