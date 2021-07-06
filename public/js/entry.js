@@ -46,6 +46,11 @@ const entryFormHandlerPart = async (unpaidHours, unpaidSalary) => {
   const industry = document.querySelector('#industry-entry-part').value;
   let salary = document.querySelector('#salary-gross-part').value.trim();
   salary = salary.replace(/[, ]+/g, "").trim();
+
+  if (isNaN(salary)) {
+    return alert("please enter a number in the salary field")
+  }
+
   if (email && industry && salary) {
     const response = await fetch('/api/entry', {
       method: 'POST',
