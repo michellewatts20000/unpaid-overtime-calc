@@ -80,7 +80,9 @@ const calculate = async () => {
   const end = document.querySelector('#end-entry').value;
   let salary = document.querySelector('#salary-gross').value.trim();
   salary = salary.replace(/[, ]+/g, "").trim();
-  console.log("salary", salary)
+  if (isNaN(salary)) {
+    return alert("please enter numbers only in the salary field")
+  }
   const extra = document.querySelector('input[name="extraTime"]:checked').value;
   const lunch = document.querySelector(
     'input[name="lunchOptions"]:checked'
@@ -155,6 +157,9 @@ const calculatePart = async () => {
   salary = salary.replace(/[, ]+/g, "").trim();
   const extra = document.querySelector('input[name="extraTime"]:checked').value;
 
+  if (isNaN(salary && paid && actual)) {
+    return alert("please enter numbers only in the salary, paid and actual field")
+  }
   event.preventDefault();
 
   if (extra === '15') {

@@ -7,7 +7,7 @@ yarn-error.log*
 lerna-debug.log*
 
 
-Seeds/
+seeds/
 
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
