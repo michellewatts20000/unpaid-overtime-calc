@@ -100,7 +100,7 @@ const calculate = async () => {
     var extraTimeRes = 0;
   }
   if (end > start) {
-    var oneDay = (end - start) + 24 - 8;
+    var oneDay = (end - start) + 24 - 7.6;
     if (oneDay < 0) {
       alert('Please enter full time hours');
     } else if (lunch === 'yeslunch') {
@@ -122,7 +122,7 @@ const calculate = async () => {
       );
     }
   } else {
-    var oneDay = (end - start) - 8;
+    var oneDay = (end - start) - 7.6;
     if (oneDay < 0) {
       alert('Please enter full time hours');
     } else if (lunch === 'yeslunch') {
@@ -178,8 +178,6 @@ const calculatePart = async () => {
   if (actual < paid) {
     return alert("You need to have worked more actual hours than your paid hours to use this calculator.")
   }
-
-
 
   let unpaidHours = ((actual - paid) * 46) + extraTimeRes
   let hourlySalary = (salary / 52) / paid;
