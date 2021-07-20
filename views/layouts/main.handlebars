@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
 
 
-    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="manifest" href="/manifest.webmanifest" />
 
 
     <meta property="og:image" content="/img/unpaid-meta-fb.png" />
@@ -59,7 +59,7 @@
 
 
     <script>
-        if ("serviceWorker" in navigator) {
+        if ("/serviceWorker" in navigator) {
             window.addEventListener("load", () => {
                 navigator.serviceWorker.register("service-worker.js").then(reg => {
                     console.log("We found your service worker file!", reg);
