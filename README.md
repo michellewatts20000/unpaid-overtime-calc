@@ -13,14 +13,13 @@ This tool would mainly be used as a survery tool to register trends across diffe
  
  * [Installation](#installation)
  * [Usage](#usage)
- * [Contributing](#contributing)
  * [Tests](#tests)
  * [License](#license)
  * [Questions](#questions)
 
 # Installation 
 ---
-If you wish to install the repo locally, please follow the instructions below.  Otherwise you can veiw the calculator on the following link [here](https://the-right-to-switch-off.herokuapp.com/).
+If you wish to install the repo locally, please follow the instructions below.  Otherwise you can veiw the calculator on the following link [here](https://www.nofreework.com.au/).
 
 Step 1 - Clone the github repo
 
@@ -46,8 +45,7 @@ Entry user will represent the survey participant, who will enter details regardi
 
 Admin user has access to a login page with admin rights. 
  
-Demo Video: 
-![Demo](https://drive.google.com/file/d/1oM007arGP0HGBWZNvvQq5QgCw5aFCsGK/view?usp=sharing)
+Screenshots:
 
 The following images show the web application's appearance and functionality: 
 
@@ -63,10 +61,6 @@ Admin Results page showing what data an admin can view, and also the ability to 
 
 ![Screenshot showing Admin Results Page](./assets/images/screenshot-admin.png)
 
-# Contributing
----
-Created by Cat Ormerod, Michelle Watts, Josep Gaspar, & Jason Bolton - see below for contact details. 
-
 # License
 ---
 Licensed under MIT.
@@ -75,12 +69,9 @@ https://opensource.org/licenses/MIT
   
 # Questions
 ---
-Please visit our GitHub at [Unpaid Overtime](https://https://github.com/CatOrmerod/unpaid-overtime-calc)
-or reach out to one of the team members
+Please visit [Unpaid Overtime](https://github.com/michellewatts20000/unpaid-overtime-calc)
+
 
 | Name | Email | Github |
 |---|---|---|
-| Jason Bolton  | [Email Jason](mailto:jasonbolton89@gmail.com) | [Jason Bolton Repo](https://github.com/Jbolton89) |
-| Jose Gaspar  | [Email Jose](mailto:josephgaspar725@gmail.com) | [Jose Gaspar Repo](https://github.com/Jose109-001) |
-| Cat Ormerod | [Email Cat](mailto:catormerod@gmail.com) | [Cat Ormerod Repo](https://github.com/CatOrmerod) |
-| Michelle Watts  | [Email Michelle](mailto:watts.e.michelle@gmail.com) | [Michelle Watts Repo](https://github.com/michellewatts20000) |
+| Michelle Watts | [Email Michelle](mailto:mwatts@unionsnsw.org.au) | [Michelle Watts Repo](https://github.com/michellewatts20000) |
