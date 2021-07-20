@@ -26,8 +26,17 @@ router.get('/:id', async (req, res) => {
   const latestEntry = await Entry.findOne({
     where: {
       id: req.params.id,
-    },
+    }
+
   });
+
+
+  const latestUser = latestEntry.get({
+    plain: true,
+  });
+
+  console.log("latestEntry LOOK", latestEntry)
+  console.log("latestUser LOOK", latestUser)
 
   const userSumAll = await Entry.findAll({
     attributes: [
@@ -70,14 +79,12 @@ router.get('/:id', async (req, res) => {
       plain: true,
     })
   );
-  const latestUser = latestEntry.get({
-    plain: true,
-  });
+
 
   const totals = users2.find((u) => u.industry === latestUser.industry);
 
   const average = (totals.total_unpaid_salary / totals.total_submissions).toFixed(0);
-  console.log("average", average)
+
 
   const totalNumber = userData.length;
 
