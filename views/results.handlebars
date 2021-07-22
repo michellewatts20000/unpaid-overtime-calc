@@ -1,36 +1,36 @@
 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-10 mx-auto text-center p-5">
 
-  {{!-- <i class="fas fa-solid fa-toggle-off"></i>
-  <h1 class="text-white mb-5">You have the right to switch off.</h1> --}}
+  {{!-- <h1 class="text-white mb-5">Free time <span style="text-decoration:underline; color: #5CE1E6;">not</span>
+    free work.
+  </h1> --}}
 
   <div class="row justify-content-md-center mb-5">
-
     <div class="col">
       <ul class="text-white" id="list">
         <li class="mb-5"><i class="fas fa-solid fa-user mb-3"></i>
           <h3 class="text-white text-center mb-3 ">
-            You worked <span class="text-danger">{{numberWithCommas latestUser.unpaidHours}}</span> hours of unpaid
+            You worked <span class="text-emp">{{numberWithCommas latestUser.unpaidHours}}</span> hours of unpaid
             overtime
             in one year
             and
-            were underpaid <span class="text-danger">${{numberWithCommas latestUser.unpaidSalary}}</span></h3>
+            were underpaid <span class="text-emp">${{numberWithCommas latestUser.unpaidSalary}}</span></h3>
         </li>
         <li class="mb-5"><i class="fas fa-solid fa-industry mb-3"></i>
           <h3 class="text-white text-center">
             In your industry
-            <span class="text-danger">{{numberWithCommas totals.industry}}</span> the average amount of unpaid overtime
+            <span class="text-emp">{{numberWithCommas totals.industry}}</span> the average amount of unpaid overtime
             per year is:
-            <span class="text-danger">${{numberWithCommas average}}</span>
+            <span class="text-emp">${{numberWithCommas average}}</span>
           </h3>
         </li>
         <li class="mb-5"><i class="fas fa-solid fa-users mb-3"></i>
           <h3 class="text-white text-center">
-            <span class="text-danger">{{numberWithCommas totalNumber}}</span> people have used this calculator and have
+            <span class="text-emp">{{numberWithCommas totalNumber}}</span> people have used this calculator and have
             worked a total of
-            {{#each users3 as | user |}}<span class="text-danger">{{numberWithCommas
+            {{#each users3 as | user |}}<span class="text-emp">{{numberWithCommas
               total_unpaid_hours}}</span>{{/each}}
             unpaid hours, which
-            totalled <span class="text-danger">${{#each users4 as | user |}}{{ numberWithCommas total_unpaid_salary
+            totalled <span class="text-emp">${{#each users4 as | user |}}{{ numberWithCommas total_unpaid_salary
               }}</span>
           </h3>{{/each}}
         </li>
@@ -40,7 +40,6 @@
           <a target="_blank"
             href="https://www.facebook.com/sharer/sharer.php?u=https%3A//unpaid-overtime.herokuapp.com/"><i
               class="fab fa-facebook-square"></i></a>
-
           <a target="_blank" href="https://twitter.com/intent/tweet?text=https%3A//unpaid-overtime.herokuapp.com/"><i
               class="fab fa-twitter-square"></i></a>
         </li>
@@ -48,110 +47,112 @@
     </div>
 
   </div>
+</div>
 
 
 
 
-  {{!-- <div id="list" class="fade-in">
-    <div class="row justify-content-md-center mb-5">
+{{!-- <div id="list" class="fade-in">
+  <div class="row justify-content-md-center mb-5">
 
-      <div class="col">
-        <i class="fas fa-solid fa-user mb-3"></i>
-        <h3 class="text-white text-center mb-3 ">
-          You worked <span class="text-danger">{{numberWithCommas latestUser.unpaidHours}}</span> hours of unpaid
-          overtime
-          in one year
-          and
-          were underpaid <span class="text-danger">${{numberWithCommas latestUser.unpaidSalary}}</span></h3>
+    <div class="col">
+      <i class="fas fa-solid fa-user mb-3"></i>
+      <h3 class="text-white text-center mb-3 ">
+        You worked <span class="text-emp">{{numberWithCommas latestUser.unpaidHours}}</span> hours of unpaid
+        overtime
+        in one year
+        and
+        were underpaid <span class="text-emp">${{numberWithCommas latestUser.unpaidSalary}}</span></h3>
 
-        <p class="text-white mb-0">Share this calculator:</p>
-        <li class="social"><a target="_blank"
-            href="https://www.facebook.com/sharer/sharer.php?u=https%3A//unpaid-overtime.herokuapp.com/"><i
-              class="fab fa-facebook-square"></i></a>
+      <p class="text-white mb-0">Share this calculator:</p>
+      <li class="social"><a target="_blank"
+          href="https://www.facebook.com/sharer/sharer.php?u=https%3A//unpaid-overtime.herokuapp.com/"><i
+            class="fab fa-facebook-square"></i></a>
 
-          <a target="_blank" href="https://twitter.com/intent/tweet?text=https%3A//unpaid-overtime.herokuapp.com/"><i
-              class="fab fa-twitter-square"></i></a>
-
-
-        </li>
-      </div>
-    </div>
-
-    <div class="row justify-content-md-center mb-5">
-      <div class="col two" id="two">
-        <i class="fas fa-solid fa-industry mb-3"></i>
-        <h3 class="text-white text-center">
-          In your industry
-          <span class="text-danger">{{numberWithCommas totals.industry}}</span> the average amount of unpaid overtime
-          per year is:
-          <span class="text-danger">${{numberWithCommas average}}</span>
-        </h3>
-
-      </div>
-    </div> --}}
-
-    {{!-- <div class="row justify-content-md-center mb-5">
-      <div class="col">
-        <i class="fas fa-solid fa-industry mb-3"></i>
-        <h3 class="text-white text-center">
-          In your industry
-          <span class="text-danger">{{numberWithCommas totals.industry}}</span>,
-          <span class="text-danger">{{numberWithCommas totals.total_submissions}}</span> people worked
-          <span class="text-danger">{{numberWithCommas totals.total_unpaid_hours}}</span>
-          unpaid hours, which totalled
-          <span class="text-danger">${{numberWithCommas totals.total_unpaid_salary}}</span>
-        </h3>
-
-      </div>
-    </div> --}}
-
-    {{!-- <div class="row justify-content-md-center mb-5">
-      <div class="col" id="three">
-        <i class="fas fa-solid fa-users mb-3"></i>
-        <h3 class="text-white text-center">
-          <span class="text-danger">{{numberWithCommas totalNumber}}</span> people have used this calculator and have
-          worked a total of
-          {{#each users3 as | user |}}<span class="text-danger">{{numberWithCommas total_unpaid_hours}}</span>{{/each}}
-          unpaid hours, which
-          totalled <span class="text-danger">${{#each users4 as | user |}}{{ numberWithCommas total_unpaid_salary
-            }}</span>
-        </h3>{{/each}}
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=https%3A//unpaid-overtime.herokuapp.com/"><i
+            class="fab fa-twitter-square"></i></a>
 
 
-      </div>
+      </li>
     </div>
   </div>
 
   <div class="row justify-content-md-center mb-5">
-    <div class="col">
-      <button type="submit" onclick="myFunction()" class="btn btn-danger">See by industry</button>
-    </div>
-  </div>
-  <div id="industry" class="row justify-content-md-center">
-    <div class="col">
-      {{#each users2 as | user |}}
-      <div class="card mb-3">
-        <h5 class="card-header">{{industry}}</h5>
-        <div class="card-body">
-          <p class="card-title">Submissions: {{numberWithCommas total_submissions}}</p>
-          <p class="card-title">Unpaid Hours: {{numberWithCommas total_unpaid_hours}}</p>
-          <p class="card-title">Unpaid Salary: ${{numberWithCommas total_unpaid_salary}}</p>
+    <div class="col two" id="two">
+      <i class="fas fa-solid fa-industry mb-3"></i>
+      <h3 class="text-white text-center">
+        In your industry
+        <span class="text-emp">{{numberWithCommas totals.industry}}</span> the average amount of unpaid overtime
+        per year is:
+        <span class="text-emp">${{numberWithCommas average}}</span>
+      </h3>
 
-        </div>
-      </div>
-      {{/each}}
     </div>
   </div> --}}
 
+  {{!-- <div class="row justify-content-md-center mb-5">
+    <div class="col">
+      <i class="fas fa-solid fa-industry mb-3"></i>
+      <h3 class="text-white text-center">
+        In your industry
+        <span class="text-emp">{{numberWithCommas totals.industry}}</span>,
+        <span class="text-emp">{{numberWithCommas totals.total_submissions}}</span> people worked
+        <span class="text-emp">{{numberWithCommas totals.total_unpaid_hours}}</span>
+        unpaid hours, which totalled
+        <span class="text-emp">${{numberWithCommas totals.total_unpaid_salary}}</span>
+      </h3>
+
+    </div>
+  </div> --}}
+
+  {{!-- <div class="row justify-content-md-center mb-5">
+    <div class="col" id="three">
+      <i class="fas fa-solid fa-users mb-3"></i>
+      <h3 class="text-white text-center">
+        <span class="text-emp">{{numberWithCommas totalNumber}}</span> people have used this calculator and have
+        worked a total of
+        {{#each users3 as | user |}}<span class="text-emp">{{numberWithCommas total_unpaid_hours}}</span>{{/each}}
+        unpaid hours, which
+        totalled <span class="text-emp">${{#each users4 as | user |}}{{ numberWithCommas total_unpaid_salary
+          }}</span>
+      </h3>{{/each}}
 
 
-  <script>
-    function myFunction() {
-      var x = document.getElementById("industry");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
-      }
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-md-center mb-5">
+  <div class="col">
+    <button type="submit" onclick="myFunction()" class="btn btn-emp">See by industry</button>
+  </div>
+</div>
+<div id="industry" class="row justify-content-md-center">
+  <div class="col">
+    {{#each users2 as | user |}}
+    <div class="card mb-3">
+      <h5 class="card-header">{{industry}}</h5>
+      <div class="card-body">
+        <p class="card-title">Submissions: {{numberWithCommas total_submissions}}</p>
+        <p class="card-title">Unpaid Hours: {{numberWithCommas total_unpaid_hours}}</p>
+        <p class="card-title">Unpaid Salary: ${{numberWithCommas total_unpaid_salary}}</p>
+
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div> --}}
+
+
+
+{{!--
+<script>
+  function myFunction() {
+    var x = document.getElementById("industry");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
     }
-  </script>
+  }
+</script> --}}

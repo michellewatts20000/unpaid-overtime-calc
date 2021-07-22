@@ -39,3 +39,17 @@ id,industry,salary,start,end,lunch,unpaidHours,unpaidSalary,email,created_at
 38,Something else. None of above fit what I do,150000,8.50,17.50,1,230,18956,ritasilva@gmail.com,1626141679000
 39,Administration & professional services,110000,7.50,17.00,1,575,34752,tomhurlbutt@gmail.com,1626141679000
 40,Health,70000,8.50,17.00,1,115,4423,mattfriedman@gmail.com,1626141679000
+41,Education,60000,9.00,17.50,1,298,9056,watts.e.michelle@gmail.com,1626750503000
+42,"Agriculture, forestry & fishing",60000,9.00,17.50,,413,12548,watts.e.michelle@gmail.com,1626750840000
+43,Community & disability services,70000,9.00,17.50,,413,14639,watts.e.michelle@gmail.com,1626750890000
+44,Community & disability services,60000,9.00,17.50,1,298,9056,mwatts@unionsnsw.org.au,1626751282000
+45,Administration & professional services,700000,9.00,17.50,1,115,41282,watts.e.michelle@gmail.com,1626751507000
+46,Construction,60000,9.00,17.50,,413,12548,watts.e.michelle@gmail.com,1626752051000
+47,"Agriculture, forestry & fishing",70000,9.00,17.50,,413,14639,watts.e.michelle@gmail.com,1626770383000
+48,Community & disability services,60000,9.00,17.50,,413,12548,mwatts@unionsnsw.org.au,1626839047000
+49,Education,70000,9.00,17.50,,413,14639,watts.e.michelle@gmail.com,1626839227000
+50,Administration & professional services,70000,9.00,17.50,,413,14639,mwatts@unionsnsw.org.au,1626839389000
+51,Community & disability services,60000,9.00,17.50,1,298,9056,watts.e.michelle@gmail.com,1626839466000
+52,Community & disability services,70000,9.00,17.50,,505,17872,watts.e.michelle@gmail.com,1626839614000
+53,Construction,70000,9.00,17.50,,413,14639,mwatts@unionsnsw.org.au,1626848391000
+54,Construction,70000,9.00,17.50,,413,14639,mwatts@unionsnsw.org.au,1626849200000

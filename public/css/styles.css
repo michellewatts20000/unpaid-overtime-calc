@@ -2,8 +2,45 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+background-color: #552CE2;
+ font-family: 'Open Sans', sans-serif;
+}
+
+
+label {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.link {
+  color: #5CE1E6 !important;
+}
+
+
+
 .input-group-text {
   border-radius: .25rem 0 0 .25rem;
+}
+
+h1 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 65px;
+  line-height: 1.25;
+  /* text-transform:uppercase; */
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.25;
+}
+
+h4 {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.25;
+}
+
+.text-emp {
+  color: #FF6E8B;
 }
 
 ul {
@@ -45,14 +82,14 @@ ul {
   font-size: 40px;
   margin-right: 10px;
   list-style: none;
-  color: #727272;
+  color: #5CE1E6;
 }
 
 .social a:hover {
   font-size: 40px;
   margin-right: 10px;
   list-style: none;
-  color: #72727262;
+  color: #96f6f9;
   ;
 }
 
@@ -61,24 +98,33 @@ ul {
   display: none;
 }
 
-.red {
-  color: rgb(186, 17, 17);
+.btn-danger {
+  background-color: #FF6E8B;
+  border-color: #FF6E8B;
 }
 
-.fa-hourglass-half {
-  color: rgb(186, 17, 17);
-  font-size: 40px;
+
+.btn-info {
+  background-color: #5CE1E6;
+  border-color: #5CE1E6;
 }
+
+/* 
+.fa-hourglass-half {
+  color: #2E7DFB;
+  font-size: 40px;
+} */
+
 
 .fa-solid {
-  color: rgb(140, 140, 140);
+  color:#5CE1E6;
   font-size: 40px;
 }
 
-.fa-toggle-off {
-  color: rgb(186, 17, 17);
+/* .fa-toggle-off {
+  color: #FF6E8B;
   font-size: 50px;
-}
+} */
 
 #industry {
   display: none;
@@ -141,10 +187,10 @@ input[type='radio'] {
 }
 
 .toggle input:checked+label {
-  background-color: #d9534f;
+  background-color: #FF6E8B;
   color: #fff;
   box-shadow: 0 0 10px rgba(102, 179, 251, .5);
-  border-color: #d9534f;
+  border-color: #FF6E8B;
   z-index: 1;
 }
 
@@ -195,10 +241,10 @@ input[type='radio'] {
 }
 
 .toggle1 input:checked+label {
-  background-color: #d9534f;
+  background-color: #FF6E8B;
   color: #fff;
   box-shadow: 0 0 10px rgba(102, 179, 251, .5);
-  border-color: #d9534f;
+  border-color: #FF6E8B;
   z-index: 1;
 }
 
@@ -247,10 +293,10 @@ input[type='radio'] {
 }
 
 .toggle2 input:checked+label {
-  background-color: #d9534f;
+  background-color: #FF6E8B;
   color: #fff;
   box-shadow: 0 0 10px rgba(102, 179, 251, .5);
-  border-color: #d9534f;
+  border-color: #FF6E8B;
   z-index: 1;
 }
 
@@ -298,10 +344,10 @@ input[type='radio'] {
 }
 
 .toggle3 input:checked+label {
-  background-color: #d9534f;
+  background-color: #FF6E8B;
   color: #fff;
   box-shadow: 0 0 10px rgba(102, 179, 251, .5);
-  border-color: #d9534f;
+  border-color: #FF6E8B;
   z-index: 1;
 }
 
