@@ -19,6 +19,18 @@ font-family: 'Roboto', sans-serif;
   color: #5CE1E6 !important;
 }
 
+.btn-custom {
+    background-color: #FF6E8B;
+  border-color: #FF6E8B;
+  color:white;
+
+}
+.btn-custom:hover {
+    background-color: #f78ba1;
+  border-color: #f78ba1;
+  color:white;
+
+}
 
 
 .input-group-text {
