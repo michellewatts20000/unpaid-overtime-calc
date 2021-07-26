@@ -5,6 +5,9 @@ self.addEventListener('install', event => {
       return cache.addAll([
         '/',
         'css/styles.css',
+        '/img/sleeping-worker.png',
+        '/img/sleeping-person.png',
+        '/img/sleeping-sitter.png',
         '/icons/icon-192x192.png',
         '/icons/icon-256x256.png',
         '/icons/icon-384x384.png',

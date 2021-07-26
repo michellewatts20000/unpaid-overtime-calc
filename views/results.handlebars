@@ -7,7 +7,9 @@
   <div class="row justify-content-md-center mb-5">
     <div class="col">
       <ul class="text-white" id="list">
-        <li class="mb-5"><i class="fas fa-solid fa-user mb-3"></i>
+        <li class="mb-5">
+          {{!-- <i class="fas fa-solid fa-user mb-3"></i> --}}
+          <img width="100px" style="margin-bottom:8px" class="result-pics" src="/img/sleeping-person.png">
           <h3 class="text-white text-center mb-3 ">
             You worked <span class="text-emp">{{numberWithCommas latestUser.unpaidHours}}</span> hours of unpaid
             overtime
@@ -15,7 +17,9 @@
             and
             were underpaid <span class="text-emp">${{numberWithCommas latestUser.unpaidSalary}}</span></h3>
         </li>
-        <li class="mb-5"><i class="fas fa-solid fa-industry mb-3"></i>
+        <li class="mb-5">
+          {{!-- <i class="fas fa-solid fa-industry mb-3"></i> --}}
+          <img src="/img/sleeping-sitter.png" style="margin-bottom:8px" class="result-pics" width="100px">
           <h3 class="text-white text-center">
             In your industry
             <span class="text-emp">{{numberWithCommas totals.industry}}</span> the average amount of unpaid overtime
@@ -23,7 +27,9 @@
             <span class="text-emp">${{numberWithCommas average}}</span>
           </h3>
         </li>
-        <li class="mb-5"><i class="fas fa-solid fa-users mb-3"></i>
+        <li class="mb-5">
+          {{!-- <i class="fas fa-solid fa-users mb-3"></i> --}}
+          <img src="/img/sleeping-worker.png" style="margin-bottom:5px" class="result-pics" width="100px">
           <h3 class="text-white text-center">
             <span class="text-emp">{{numberWithCommas totalNumber}}</span> people have used this calculator and have
             worked a total of
