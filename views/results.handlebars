@@ -23,20 +23,20 @@
           <h3 class="text-white text-center">
             In your industry
             <span class="text-emp">{{numberWithCommas totals.industry}}</span> the average amount of unpaid overtime
-            per year is:
+            per year is
             <span class="text-emp">${{numberWithCommas average}}</span>
           </h3>
         </li>
         <li class="mb-5">
           {{!-- <i class="fas fa-solid fa-users mb-3"></i> --}}
-          <img src="/img/sleeping-worker.png" style="margin-bottom:5px" class="result-pics" width="100px">
+          <img src="/img/sleeping-worker-v2.png" style="margin-bottom:5px" class="result-pics" width="100px">
           <h3 class="text-white text-center">
             <span class="text-emp">{{numberWithCommas totalNumber}}</span> people have used this calculator and have
             worked a total of
             {{#each users3 as | user |}}<span class="text-emp">{{numberWithCommas
               total_unpaid_hours}}</span>{{/each}}
             unpaid hours, which
-            totalled <span class="text-emp">${{#each users4 as | user |}}{{ numberWithCommas total_unpaid_salary
+            adds up to <span class="text-emp">${{#each users4 as | user |}}{{ numberWithCommas total_unpaid_salary
               }}</span>
           </h3>{{/each}}
         </li>
