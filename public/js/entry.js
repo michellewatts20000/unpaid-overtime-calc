@@ -102,7 +102,12 @@ const calculate = async () => {
   if (end > start) {
     var oneDay = (end - start) + 24 - 7.6;
     if (oneDay < 0) {
+
+      // document.querySelector("#myalert").style.display = "block";
+
+      // $('#myalert').show();
       alert('Please enter full time hours');
+
     } else if (lunch === 'yeslunch') {
       let unpaidHours = (oneDay * 230) + extraTimeRes;
       let hourlySalary = (salary / 260) / 7.6;
@@ -124,7 +129,11 @@ const calculate = async () => {
   } else {
     var oneDay = (end - start) - 7.6;
     if (oneDay < 0) {
+      // document.querySelector("#myalert").style.display = "block";
       alert('Please enter full time hours');
+      // $('#myAlert').show();
+
+
     } else if (lunch === 'yeslunch') {
       let unpaidHours = (oneDay * 230) + extraTimeRes;
       let hourlySalary = (salary / 260) / 7.6;
