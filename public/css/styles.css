@@ -3,9 +3,9 @@ html {
 }
 
 body {
-background-color: #552CE2;
-font-family: 'Roboto', sans-serif;
- /* font-family: 'Open Sans', sans-serif; */
+  background-color: #552CE2;
+  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
 }
 
 .result-pics {
@@ -14,7 +14,7 @@ font-family: 'Roboto', sans-serif;
 
 label {
   /* font-family: 'Open Sans', sans-serif; */
-font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
 }
 
@@ -23,15 +23,16 @@ font-family: 'Roboto', sans-serif;
 }
 
 .btn-custom {
-    background-color: #FF6E8B;
+  background-color: #FF6E8B;
   border-color: #FF6E8B;
-  color:white;
-
+  color: white;
+  font-weight: 700;
 }
+
 .btn-custom:hover {
-    background-color: #f78ba1;
+  background-color: #f78ba1;
   border-color: #f78ba1;
-  color:white;
+  color: white;
 
 }
 
@@ -137,7 +138,7 @@ ul {
 
 
 .fa-solid {
-  color:#5CE1E6;
+  color: #5CE1E6;
   font-size: 40px;
 }
 
@@ -383,10 +384,10 @@ input[type='radio'] {
 
   h1 {
 
-  font-size: 45px;
+    font-size: 45px;
 
 
-}
+  }
 
 
 
