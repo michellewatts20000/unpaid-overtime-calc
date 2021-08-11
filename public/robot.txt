@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nofreework.com.au/sitemap.xmls
