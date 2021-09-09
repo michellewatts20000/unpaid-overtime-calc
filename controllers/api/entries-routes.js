@@ -16,6 +16,7 @@ router.post('/', async (req, res) => {
     salary,
     unpaidHours,
     unpaidSalary,
+    occupation,
   } = req.body;
   console.log(req.body);
 
@@ -33,6 +34,7 @@ router.post('/', async (req, res) => {
           "Salary": req.body.salary,
           "Unpaid Hours": req.body.unpaidHours,
           "Unpaid Salary": req.body.unpaidSalary,
+          "Occupation/Role": req.body.occupation,
         }
       },
       "add_tags": [
@@ -57,6 +59,7 @@ router.post('/', async (req, res) => {
     unpaidHours,
     unpaidSalary,
     email,
+    occupation,
   });
 
   res.json({

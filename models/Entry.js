@@ -5,7 +5,7 @@ const {
 } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Entry extends Model {}
+class Entry extends Model { }
 
 Entry.init({
   id: {
@@ -20,6 +20,10 @@ Entry.init({
   },
   salary: {
     type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  occupation: {
+    type: DataTypes.STRING,
     allowNull: false,
   },
   start: {

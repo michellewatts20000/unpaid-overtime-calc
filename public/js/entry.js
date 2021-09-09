@@ -3,9 +3,11 @@ const entryFormHandler = async (unpaidHours, unpaidSalary) => {
   const industry = document.querySelector('#industry-entry').value;
   const start = document.querySelector('#start-entry').value;
   const end = document.querySelector('#end-entry').value;
+  const occupation = document.querySelector('#occupation-entry').value;
   let salary = document.querySelector('#salary-gross').value.trim();
   salary = salary.replace(/[, ]+/g, "").trim();
   console.log("salary", salary)
+  console.log("occupation", occupation)
   const lunch = document.querySelector(
     'input[name="lunchOptions"]:checked').value;
 
@@ -25,6 +27,7 @@ const entryFormHandler = async (unpaidHours, unpaidSalary) => {
         salary,
         unpaidHours,
         unpaidSalary,
+        occupation,
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -44,6 +47,7 @@ const entryFormHandler = async (unpaidHours, unpaidSalary) => {
 const entryFormHandlerPart = async (unpaidHours, unpaidSalary) => {
   const email = document.querySelector('#email-entry-part').value.trim();
   const industry = document.querySelector('#industry-entry-part').value;
+  const occupation = document.querySelector('#occupation-entry-part').value;
   let salary = document.querySelector('#salary-gross-part').value.trim();
   salary = salary.replace(/[, ]+/g, "").trim();
 
@@ -60,6 +64,7 @@ const entryFormHandlerPart = async (unpaidHours, unpaidSalary) => {
         salary,
         unpaidHours,
         unpaidSalary,
+        occupation,
       }),
       headers: {
         'Content-Type': 'application/json',
