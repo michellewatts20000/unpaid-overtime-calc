@@ -31,6 +31,8 @@ router.post('/', async (req, res) => {
         "custom_fields": {
           "Industry": req.body.industry,
           "Salary": req.body.salary,
+          "Unpaid Hours": req.body.unpaidHours,
+          "Unpaid Salary": req.body.unpaidSalary,
         }
       },
       "add_tags": [
