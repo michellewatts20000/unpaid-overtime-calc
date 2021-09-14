@@ -10,6 +10,7 @@ const entryFormHandler = async (unpaidHours, unpaidSalary) => {
   console.log("occupation", occupation)
   const lunch = document.querySelector(
     'input[name="lunchOptions"]:checked').value;
+  const extra = document.querySelector('input[name="extraTime"]:checked').value;
 
   if (isNaN(salary)) {
     return alert("please enter numbers in the salary field")
@@ -28,6 +29,7 @@ const entryFormHandler = async (unpaidHours, unpaidSalary) => {
         unpaidHours,
         unpaidSalary,
         occupation,
+        extra
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -50,7 +52,7 @@ const entryFormHandlerPart = async (unpaidHours, unpaidSalary) => {
   const occupation = document.querySelector('#occupation-entry-part').value;
   let salary = document.querySelector('#salary-gross-part').value.trim();
   salary = salary.replace(/[, ]+/g, "").trim();
-
+  const extra = document.querySelector('input[name="extraTime"]:checked').value;
   if (isNaN(salary)) {
     return alert("please enter numbers in the salary field")
   }
@@ -65,6 +67,7 @@ const entryFormHandlerPart = async (unpaidHours, unpaidSalary) => {
         unpaidHours,
         unpaidSalary,
         occupation,
+        extra
       }),
       headers: {
         'Content-Type': 'application/json',

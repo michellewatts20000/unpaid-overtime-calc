@@ -45,6 +45,9 @@ Entry.init({
   unpaidSalary: {
     type: DataTypes.INTEGER,
   },
+  extra: {
+    type: DataTypes.INTEGER,
+  },
   email: {
     type: DataTypes.STRING,
     allowNull: false,

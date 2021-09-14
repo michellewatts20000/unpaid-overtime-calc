@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const nodemailer = require('nodemailer');
+// const nodemailer = require('nodemailer');
 const axios = require('axios');
 const {
   Entry
@@ -17,6 +17,7 @@ router.post('/', async (req, res) => {
     unpaidHours,
     unpaidSalary,
     occupation,
+    extra
   } = req.body;
   console.log(req.body);
 
@@ -35,6 +36,11 @@ router.post('/', async (req, res) => {
           "Unpaid Hours": req.body.unpaidHours,
           "Unpaid Salary": req.body.unpaidSalary,
           "Occupation/Role": req.body.occupation,
+          "Start time": req.body.start,
+          "Finish time": req.body.end,
+          "Lunch break": req.body.lunch,
+          "Extra time": req.body.extra,
+
         }
       },
       "add_tags": [
@@ -60,6 +66,7 @@ router.post('/', async (req, res) => {
     unpaidSalary,
     email,
     occupation,
+    extra
   });
 
   res.json({
