@@ -52,7 +52,7 @@ const entryFormHandlerPart = async (unpaidHours, unpaidSalary) => {
   const occupation = document.querySelector('#occupation-entry-part').value;
   let salary = document.querySelector('#salary-gross-part').value.trim();
   salary = salary.replace(/[, ]+/g, "").trim();
-  const extra = document.querySelector('input[name="extraTime"]:checked').value;
+  const extra = document.querySelector('input[name="extraTime2"]:checked').value;
   if (isNaN(salary)) {
     return alert("please enter numbers in the salary field")
   }
@@ -110,10 +110,6 @@ const calculate = async () => {
   if (end > start) {
     var oneDay = (end - start) + 24 - 7.6;
     if (oneDay < 0) {
-
-      // document.querySelector("#myalert").style.display = "block";
-
-      // $('#myalert').show();
       alert('Please enter full time hours');
 
     } else if (lunch === 'yeslunch') {
@@ -137,10 +133,7 @@ const calculate = async () => {
   } else {
     var oneDay = (end - start) - 7.6;
     if (oneDay < 0) {
-      // document.querySelector("#myalert").style.display = "block";
       alert('Please enter full time hours');
-      // $('#myAlert').show();
-
 
     } else if (lunch === 'yeslunch') {
       let unpaidHours = (oneDay * 230) + extraTimeRes;
@@ -172,7 +165,7 @@ const calculatePart = async () => {
   const actual = document.querySelector('#actual-hours').value;
   let salary = document.querySelector('#salary-gross-part').value.trim();
   salary = salary.replace(/[, ]+/g, "").trim();
-  const extra = document.querySelector('input[name="extraTime"]:checked').value;
+  const extra = document.querySelector('input[name="extraTime2"]:checked').value;
 
   if (isNaN(salary && paid && actual)) {
     return alert("please enter numbers only in the salary, paid and actual field")
