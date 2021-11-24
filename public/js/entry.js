@@ -86,6 +86,7 @@ const entryFormHandlerPart = async (unpaidHours, unpaidSalary) => {
 const calculate = async () => {
   const start = document.querySelector('#start-entry').value;
   const end = document.querySelector('#end-entry').value;
+  console.log("start", start, "end", end)
   let salary = document.querySelector('#salary-gross').value.trim();
   salary = salary.replace(/[, ]+/g, "").trim();
   if (isNaN(salary)) {
@@ -107,56 +108,56 @@ const calculate = async () => {
   } else {
     var extraTimeRes = 0;
   }
-  if (end > start) {
-    var oneDay = (end - start) + 24 - 7.6;
-    if (oneDay < 0) {
-      alert('Please enter full time hours');
+  // if (end > start) {
+  //   var oneDay = (end - start) + 24 - 7.6;
+  //   if (oneDay < 0) {
+  //     alert('Please enter full time hours');
 
-    } else if (lunch === 'yeslunch') {
-      let unpaidHours = (oneDay * 230) + extraTimeRes;
-      let hourlySalary = (salary / 260) / 7.6;
-      let unpaidSalary = hourlySalary * unpaidHours;
-      return entryFormHandler(
-        parseInt(unpaidHours.toFixed(0)),
-        parseInt(unpaidSalary.toFixed(0))
-      );
-    } else {
-      var oneDayNew = oneDay + 0.5;
-      let unpaidHours = (oneDayNew * 230) + extraTimeRes;
-      let hourlySalary = (salary / 260) / 7.6;
-      let unpaidSalary = hourlySalary * unpaidHours;
-      return entryFormHandler(
-        parseInt(unpaidHours.toFixed(0)),
-        parseInt(unpaidSalary.toFixed(0))
-      );
-    }
+  //   } else if (lunch === 'yeslunch') {
+  //     let unpaidHours = (oneDay * 230) + extraTimeRes;
+  //     let hourlySalary = (salary / 260) / 7.6;
+  //     let unpaidSalary = hourlySalary * unpaidHours;
+  //     return entryFormHandler(
+  //       parseInt(unpaidHours.toFixed(0)),
+  //       parseInt(unpaidSalary.toFixed(0))
+  //     );
+  //   } else {
+  //     var oneDayNew = oneDay + 0.5;
+  //     let unpaidHours = (oneDayNew * 230) + extraTimeRes;
+  //     let hourlySalary = (salary / 260) / 7.6;
+  //     let unpaidSalary = hourlySalary * unpaidHours;
+  //     return entryFormHandler(
+  //       parseInt(unpaidHours.toFixed(0)),
+  //       parseInt(unpaidSalary.toFixed(0))
+  //     );
+  //   }
+  // } else {
+  var oneDay = (end - start) - 8;
+  if (oneDay < 0) {
+    alert('Please enter full time hours');
+
+  } else if (lunch === 'yeslunch') {
+    let unpaidHours = (oneDay * 230) + extraTimeRes;
+    let hourlySalary = (salary / 260) / 7.6;
+    let unpaidSalary = hourlySalary * unpaidHours;
+    return entryFormHandler(
+      parseInt(unpaidHours.toFixed(0)),
+      parseInt(unpaidSalary.toFixed(0))
+    );
+
   } else {
-    var oneDay = (end - start) - 7.6;
-    if (oneDay < 0) {
-      alert('Please enter full time hours');
+    var oneDayNew = oneDay + 0.5;
+    let unpaidHours = (oneDayNew * 230) + extraTimeRes;
+    let hourlySalary = (salary / 260) / 7.6;
+    let unpaidSalary = hourlySalary * unpaidHours;
+    return entryFormHandler(
+      parseInt(unpaidHours.toFixed(0)),
+      parseInt(unpaidSalary.toFixed(0))
+    );
 
-    } else if (lunch === 'yeslunch') {
-      let unpaidHours = (oneDay * 230) + extraTimeRes;
-      let hourlySalary = (salary / 260) / 7.6;
-      let unpaidSalary = hourlySalary * unpaidHours;
-      return entryFormHandler(
-        parseInt(unpaidHours.toFixed(0)),
-        parseInt(unpaidSalary.toFixed(0))
-      );
-
-    } else {
-      var oneDayNew = oneDay + 0.5;
-      let unpaidHours = (oneDayNew * 230) + extraTimeRes;
-      let hourlySalary = (salary / 260) / 7.6;
-      let unpaidSalary = hourlySalary * unpaidHours;
-      return entryFormHandler(
-        parseInt(unpaidHours.toFixed(0)),
-        parseInt(unpaidSalary.toFixed(0))
-      );
-
-    }
   }
 }
+// }
 
 
 
